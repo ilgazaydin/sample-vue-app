@@ -1,0 +1,64 @@
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/buttons";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $gray-800;
+  background-color: $gray-100;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: $black;
+  padding: $navbar-padding-y;
+  a {
+    font-size: $font-size-lg;
+    font-weight: 600;
+    color: $white;
+  }
+}
+.text {
+  &--light {
+    font-weight: 300;
+  }
+  &--regular {
+    font-weight: 400;
+  }
+  &--medium {
+    font-weight: 500;
+  }
+  &--semi-bold {
+    font-weight: 600;
+  }
+  &--bold {
+    font-weight: 700;
+  }
+  &--align-right {
+    text-align: right;
+  }
+}
+.btn {
+  display: block;
+  text-decoration: none;
+  flex: 1;
+  @include transition();
+  &--teal {
+    background-color: $teal;
+    color: $white;
+  }
+  &:hover {
+    background-color: lighten($teal, 2);
+    color: $white;
+  }
+}
